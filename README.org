@@ -1,0 +1,26 @@
+* Beispiele für EProg Übungsstunden
+
+** In Eclipse importieren
+Ihr könnt dieses Repository auf die gleiche Weise wie euer eigenes Repository in Eclipse hinzufügen:
+
+1. Cloned dieses Repo in Eclipse:
+
+[[./images/1601552267.9840186.png]]
+
+
+2. Gebt im Feld "URI" folgende Adresse ein: https://github.com/remolueoend/TA_eprog_examples.git Stellt sicher, dass die Felder "User" und "Password" leer sind (dies ist ein öffentliches Repo)
+   
+[[./images/1601552382.8870108.png]]
+
+3. Im nächsten Fenster könnt ihr alles so belassen wie es ist.
+
+4. Danach könnt ihr noch *optional* den Pfad anpassen, wohin die Code-Dateien auf eurem Computer gespeichert werden:
+
+[[./images/1601552930.6394558.png]]
+
+
+5. Ihr solltet nach einem kurzen Moment das neue Repo neben eurem Eigenen sehen:
+   
+[[./images/1601553100.0271356.png]]
+
+6. Mit Rechts-Klick auf "general_examples" könnt ihr "Import Projects..." wählen und das Projekt in Eclipse importieren.
