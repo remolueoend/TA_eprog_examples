@@ -8,12 +8,12 @@ public class LogicExamples {
 		if(x > 5 && y++ > 7) {
 			System.out.println("hit");
 		}
-		System.out.println("y: " + y);
+		System.out.println("Nach 1. IF: y: " + y);
 		
 		if(y++ > 7 && x > 0) {
 			System.out.println("hit again");
 		}
-		System.out.println("y: " + y);
+		System.out.println("Nach 2. IF: y: " + y);
 	}
 
 }

@@ -37,6 +37,12 @@ public class IncDecExamples {
 	}
 
 	public static void main(String[] args) {
-		Ex5();
+		// Entfernt die Kommentar-Zeichen ('//') von der jeweiligen
+		// Ziele der Funktion die ihr ausführen möchtet:
+		Ex1();
+//		Ex2();
+//		Ex3();
+//		Ex4();
+//		Ex5();
 	}
 }
