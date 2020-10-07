@@ -24,3 +24,20 @@ Ihr könnt dieses Repository auf die gleiche Weise wie euer eigenes Repository i
 [[./images/1601553100.0271356.png]]
 
 *** 6. Mit Rechts-Klick auf "general_examples" könnt ihr "Import Projects..." wählen und das Projekt in Eclipse importieren.
+
+** GIT-Probleme lösen
+*** Dateien erscheinen nicht unter 'Unstaged Changes'
+    - Lösung :: Datei wurde seit letztem Commit nicht geändert oder ist noch nicht gespeichert worden.
+ 
+*** rejected - non-fast-forward bei Push
+ [[./images/1602096976.566766.png]] 
+
+ - Lösung :: Zuerst nochmals 'Pull' ausführen.
+
+*** das Resultat von 'Pull' ist conflicting
+[[./images/1602097120.3529356.png]]
+
+
+[[./images/1602097260.684266.png]]
+
+- Lösung :: Alles aus der Datei entfernen, was ich nicht behalten wollt (inklusive den Markierungen (=======, =<<<<<< HEAD=, =>>>>>>>>>>>=) und die Datei(en) nochmals speichern und committen. Danach könnt ihr 'Push' ausführen.
