@@ -7,5 +7,4 @@ public class TestExamples {
 	public static void main(String[] args) {
 		System.out.println("die Norm von (3, 4) ist: " + norm(3, 4));
 	}
-
 }
