@@ -1,0 +1,48 @@
+# Unsere eigene Programmiersprache
+
+## was braucht unsere Sprache?
+
+class Vector {
+	double x
+	double y
+	double z
+	
+	Vector(double xKoord, double yKoord, double zKoord) {
+		this.x = xKoord 
+		this.y = yKoord 
+		this.z = zKoord
+	}
+	
+	double norm() {
+		return sqrt(this.x^2 + this.y^2 + this.z^2)
+	}
+
+	void add(Vector w) {
+		this.x += w.x
+		this.y += w.y
+		this.z += w.z
+	}
+}
+
+class Schuelerin {
+	String name
+	int age
+	String studies
+}
+
+
+
+Vector vektor1 = new Vector(5, 6, 7)
+Vector vektor2 = new Vector(1, 2, 3)
+
+Schuelerin s = Schuelerin{name="Alice", age=25, studies="IN"}
+
+double n = norm(vektor1)
+Vector vektor3 = add_vectors(vektor1, vektor2)
+
+double n = vektor1.norm()
+double m = vektor2.norm()
+
+vektor1.add(vektor2)
+
+

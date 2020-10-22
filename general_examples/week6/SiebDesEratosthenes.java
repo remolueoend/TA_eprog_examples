@@ -1,4 +1,3 @@
-package general_examples;
 
 public class SiebDesEratosthenes {
 	public static void sieb(int limit) {
