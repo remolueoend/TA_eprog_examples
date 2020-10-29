@@ -23,10 +23,8 @@ public class LinkedIntList {
 			this.first = newNode;
 		}
 	}
-}
-
-class Program {
-	public static void main() {
+	
+	public static void main(String[] args) {
 		LinkedIntList myList = new LinkedIntList();
 		myList.addFirst(3);
 	}
