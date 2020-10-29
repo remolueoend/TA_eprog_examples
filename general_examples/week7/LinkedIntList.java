@@ -1,7 +1,7 @@
 /**
  * Klasse welche einzelne Elemente einer Liste beschreibt.
  * Jedes Element in der Liste hat dabei einen Wert (value) dieses Eintrags,
- * und eine Referenz zum nächsten Node in der Liste (next).
+ * und eine Referenz zum nächsten Eintrag/Node in der Liste (next).
  */
 class IntNode {
     public int value;
@@ -14,12 +14,12 @@ class IntNode {
 
 /**
  * Diese Klasse beschreibt eine Liste. Jede Liste sollte uns erlauben, Elemente hinzuzufügen (am Anfang der Liste oder am Ende),
- * Elemente zu entfernen, abzufragen, ob die Liste leer ist etc. Diese Methoden werden also alle in dieser Klasse implementiert.
+ * Elemente zu entfernen, abzufragen ob die Liste leer ist etc. Diese Methoden werden also alle in dieser Klasse implementiert.
  */
 public class LinkedIntList {
     /**
      * Der Wert des Attrbuts `first` jeder Liste ist das erste Element (der erste IntNode) dieser Liste.
-     * Wenn die Liste leer ist, dann sollte `this.first == null` sein, also nicht zugewiesen haben.
+     * Wenn die Liste leer ist, dann sollte `this.first == null` sein, also nichts zugewiesen haben.
      */
     public IntNode first;
     /**
@@ -44,10 +44,25 @@ public class LinkedIntList {
             this.last = newNode;
         } else {
             // Die Liste war nicht leer. Wir erstellen auch hier einen neuen Node und hängen ihn an den Beginn der Liste:
-            // 1. Wir setzten `next` vom neuen Node das aktuell erste Element der Liste (`newNode.next = this.first`).
-            // 2. Das erste Element der Liste ist nun unser neuer Node (`this.first = newNode`)
             IntNode newNode = new IntNode(value);
+
+            // Dann setzen wir `next` vom neuen Node auf das aktuell erste Element der Liste (`newNode.next = this.first`):
+            // 
+            //                           this.first
+            //                               |
+            //                               v
+            // +--------------+ next  +--------------+
+            // |    newNode   | ----> |    xxxxx     | ----> ...
+            // +--------------+       +--------------+
             newNode.next = this.first;
+            // 2. Das erste Element der Liste soll nun unser neuer Node sein (`this.first = newNode`)
+            //
+            //     this.first
+            //         |
+            //         v
+            // +--------------+ next  +--------------+
+            // |    newNode   | ----> |    xxxxx     | ----> ...
+            // +--------------+       +--------------+
             this.first = newNode;
         }
     }
@@ -61,11 +76,11 @@ public class LinkedIntList {
         myList.addFirst(1);
 
         // Wir wollen nun über alle Elemente unsere Liste loopen und den Wert jedes Elements ausgeben.
-        // Dazu starten wir mit dem ersten Element/Node (`myList.first`) und loopen solange, wie `current` nicht `null` ist:
+        // Dazu starten wir mit dem ersten Element/Node (`myList.first`) und loopen solange, wie wir nächste Elemente/Nodes finden:
         IntNode current = myList.first;
         while(current != null) {
             // Wert des aktuellen Elements (IntNode) ausgeben:
-            System.printf(current.value);
+            System.out.println(current.value);
             // Wir setzen nun als `current` das Folge-Element des aktuellen Elements und beginnen wieder von vorne.
             // Wenn `current` das letzte Element der Liste ist, wird `current.next == null` sein, und der Loop wird somit
             // abbrechen.
