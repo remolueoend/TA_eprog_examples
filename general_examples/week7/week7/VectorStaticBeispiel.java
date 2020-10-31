@@ -1,3 +1,5 @@
+package week7;
+
 /*
  * Author: Samuel Bohl <bohls@student.ethz.ch>
  * 
