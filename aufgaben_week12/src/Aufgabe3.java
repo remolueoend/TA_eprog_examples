@@ -129,7 +129,7 @@ public class Aufgabe3 {
 		students2.add(new Student(987));
 		
 		// Ihr seht hier: Da wir die Methode mit T=Student verwenden, ist auch der Return-Value eine ArrayList vom typ Student:
-		ArrayList<Student> intersection = intersect_advanced(students1, students2);
+		ArrayList<Student> intersection = Aufgabe3.<Student>intersect_advanced(students1, students2);
 		
 		System.out.println("Students:" + intersection);
 		
@@ -144,7 +144,7 @@ public class Aufgabe3 {
 		MultipleGenerator g3 = new MultipleGenerator(3, 20);
 		
 		// MultipleGenerator implementiert `Iterable<Integer>` => T=Integer => der Return-Type der Methode ist ArrayList<T> = ArrayList<Integer>
-		ArrayList<Integer> multiplesOf2and3 = intersect_advanced(g2, g3);
+		ArrayList<Integer> multiplesOf2and3 = Aufgabe3.<Integer>intersect_advanced(g2, g3);
 		System.out.println("Multiples of 2 and 3: " + multiplesOf2and3);
 
 	}
