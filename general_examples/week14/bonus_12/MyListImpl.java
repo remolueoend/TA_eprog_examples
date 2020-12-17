@@ -40,7 +40,7 @@ class MyNode<T> implements MyListNode<T> {
 }
 
 class MyListIterator<T> implements Iterator<T> {
-	MyListNode<T> next;
+	private MyListNode<T> next;
 
 	public MyListIterator(MyListNode<T> first) {
 		this.next = first;
@@ -66,6 +66,9 @@ public class MyListImpl<T> implements MyList<T> {
 
 	@Override
 	public T get(int index) {
+		if (this.first instanceof MyNode) {
+			MyNode<T> n = (MyNode<T>) this.first;
+		}
 		return this.getNode(index).value();
 	}
 
@@ -119,8 +122,9 @@ public class MyListImpl<T> implements MyList<T> {
 
 	@Override
 	public void addAll(MyList<T> other) {
-		if(other.isEmpty()) return;
-		
+		if (other.isEmpty())
+			return;
+
 		MyListNode<T> otherFirst = other.getNode(0);
 		MyListNode<T> otherLast = other.getNode(other.getSize() - 1); // Laufzeit hängt von Implementation von other ab!
 
@@ -129,7 +133,7 @@ public class MyListImpl<T> implements MyList<T> {
 			this.last = otherLast;
 		} else {
 			this.last.setNext(otherFirst);
-			this.last = otherLast; 
+			this.last = otherLast;
 		}
 		this.size += other.getSize();
 	}
@@ -179,5 +183,14 @@ public class MyListImpl<T> implements MyList<T> {
 	@Override
 	public Iterator<T> iterator() {
 		return new MyListIterator<T>(this.first);
+	}
+
+	public static void main(String[] args) {
+		MyListImpl<String> list = new MyListImpl<>();
+		Iterator<String> it = list.iterator();
+
+		while (it.hasNext()) {
+			System.out.println(it.next());
+		}
 	}
 }
